@@ -8,7 +8,7 @@ namespace GildedRoseRefactoringKata.Tests
     class NormalItemTest
     {
         [Test]
-        public void Test1()
+        public void UpdateQuality_Given1Day_ValuesChangeBy1()
         {
             //Arrange
             int days = 1;
@@ -16,12 +16,12 @@ namespace GildedRoseRefactoringKata.Tests
                 new Item { Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20 },
                 new Item { Name = "Elixir of the Mongoose", SellIn = 15, Quality = 37 }
             };
-
-
-            // Act
             GildedRose app = new GildedRose(Items);
 
-            for(int i = 0; i < days; i++) app.UpdateQuality();
+            // Act
+
+
+            for (int i = 0; i < days; i++) app.UpdateQuality();
 
 
 
@@ -34,8 +34,9 @@ namespace GildedRoseRefactoringKata.Tests
             Assert.AreEqual(14, Items[1].SellIn);
             Assert.AreEqual(36, Items[1].Quality);
         }
+
         [Test]
-        public void Test2()
+        public void UpdateQuality_Given10Days_ValuesChangeNormaly()
         {
             //Arrange
             int days = 10;
@@ -43,10 +44,10 @@ namespace GildedRoseRefactoringKata.Tests
                 new Item { Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20 },
                 new Item { Name = "Elixir of the Mongoose", SellIn = 15, Quality = 37 }
             };
-
+            GildedRose app = new GildedRose(Items);
 
             // Act
-            GildedRose app = new GildedRose(Items);
+
 
             for (int i = 0; i < days; i++) app.UpdateQuality();
 
@@ -61,8 +62,9 @@ namespace GildedRoseRefactoringKata.Tests
             Assert.AreEqual(5, Items[1].SellIn);
             Assert.AreEqual(27, Items[1].Quality);
         }
+
         [Test]
-        public void Test3()
+        public void UpdateQuality_Given40Days_SellInNegativeQuality0()
         {
             //Arrange
             int days = 40;
@@ -70,10 +72,10 @@ namespace GildedRoseRefactoringKata.Tests
                 new Item { Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20 },
                 new Item { Name = "Elixir of the Mongoose", SellIn = 15, Quality = 37 }
             };
-
+            GildedRose app = new GildedRose(Items);
 
             // Act
-            GildedRose app = new GildedRose(Items);
+
 
             for (int i = 0; i < days; i++) app.UpdateQuality();
 
@@ -88,8 +90,9 @@ namespace GildedRoseRefactoringKata.Tests
             Assert.AreEqual(-25, Items[1].SellIn);
             Assert.AreEqual(0, Items[1].Quality);
         }
+
         [Test]
-        public void Test4()
+        public void UpdateQuality_Given40Days_SellInNegative()
         {
             //Arrange
             int days = 12;
@@ -97,10 +100,10 @@ namespace GildedRoseRefactoringKata.Tests
                 new Item { Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20 },
                 new Item { Name = "Elixir of the Mongoose", SellIn = 11, Quality = 37 }
             };
-
+            GildedRose app = new GildedRose(Items);
 
             // Act
-            GildedRose app = new GildedRose(Items);
+
 
             for (int i = 0; i < days; i++) app.UpdateQuality();
 
