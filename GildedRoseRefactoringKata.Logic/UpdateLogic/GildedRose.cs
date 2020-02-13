@@ -1,5 +1,6 @@
 ﻿using GildedRoseRefactoringKata.Logic.ItemLogics;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GildedRoseRefactoringKata.Logic.UpdateLogic
 {
@@ -35,6 +36,16 @@ namespace GildedRoseRefactoringKata.Logic.UpdateLogic
                     Items[i] = norlmalItem.GetUpdatedItem();
                 }
             }
+        }
+        public void UpdateItemsUsingLinq()
+        {
+            Items.Where(item => item.Name.Equals("Aged Brie")).ToList().ForEach(item => new AgedBrieLogic(item).GetUpdatedItem());
+
+            Items.Where(item => item.Name.Equals("Backstage passes to a TAFKAL80ETC concert")).ToList().ForEach(item => new BackStagePassLogic(item).GetUpdatedItem());
+
+            Items.Where(item => item.Name.Equals("+5 Dexterity Vest")).ToList().ForEach(item => new NormalItemLogic(item).GetUpdatedItem());
+
+            Items.Where(item => item.Name.Equals("Elixir of the Mongoose")).ToList().ForEach(item => new NormalItemLogic(item).GetUpdatedItem());
         }
     }
 }
