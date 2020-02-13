@@ -11,7 +11,7 @@ namespace GildedRoseRefactoringKata.Logic.UpdateLogic
             this.Items = Items;
         }
 
-        public void UpdateQuality()
+        public void UpdateItems()
         {
             for (var i = 0; i < Items.Count; i++)
             {
