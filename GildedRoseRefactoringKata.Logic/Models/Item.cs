@@ -1,4 +1,4 @@
-﻿namespace GildedRoseRefactoringKata
+﻿namespace GildedRoseRefactoringKata.Logic.ItemLogics
 {
     public class Item
     {
