@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 
 namespace GildedRoseRefactoringKata.Logic.Calculations
 {
-    public class SellInChanger
+    public class SellInCalculator
     {
         public int SellIn { get; set; }
-        public SellInChanger(int sellIn)
+        public SellInCalculator(int sellIn)
         {
             SellIn = sellIn;
         }
         public int DecreaseQualityBy(int number)
         {
-            for (int i = 0; i < number; i++) DecreaseSellInByOne();
+            for (int i = 0; i < number; i++) SellIn = DecreaseSellInByOne();
 
             return SellIn;
         }
-        public int DecreaseSellInByOne() => SellIn--;
-        public bool IsSellInNegative() => SellIn < 0 ? true : false;
+        public int DecreaseSellInByOne() => SellIn - 1;
+        
+        public bool IsSellInNegativeOrZero() => SellIn <= 0 ? true : false;
     }
 }

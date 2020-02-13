@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace GildedRoseRefactoringKata.Logic.Calculations
 {
-    public class QualityChanger
+    public class QualityCalculator
     {
         public int Quality { get; set; }
-        public QualityChanger(int quality)
+        public QualityCalculator(int quality)
         {
             Quality = quality;
         }
         
         public int DecreaseQualityBy(int number)
         {
-            for(int i = 0; i < number; i++) DecreaseQualityByOne();
+            for(int i = 0; i < number; i++) Quality = DecreaseQualityByOne();
 
             return Quality;
         }
@@ -24,13 +24,13 @@ namespace GildedRoseRefactoringKata.Logic.Calculations
         
         public int IncreaseQualityBy(int number)
         {
-            for (int i = 0; i < number; i++) IncreaseQualityByOne();
+            for (int i = 0; i < number; i++) Quality = IncreaseQualityByOne();
 
             return Quality;
         }
 
-        public int DecreaseQualityByOne() => Quality <= 0 ? 0 : Quality--;
+        public int DecreaseQualityByOne() => Quality <= 0 ? 0 : Quality - 1;
 
-        public int IncreaseQualityByOne() => Quality >= 50 ? 50 : Quality++;
+        public int IncreaseQualityByOne() => Quality >= 50 ? 50 : Quality + 1;
     }
 }
