@@ -1,13 +1,20 @@
-﻿using System;
+﻿using GildedRoseRefactoringKata.Logic.ItemLogics;
+using GildedRoseRefactoringKata.Logic.UpdateLogic;
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace GildedRoseRefactoringKata
 {
     public class Program
     {
+        public static string Text { get; set; }
         public static void Main(string[] args)
         {
             Console.WriteLine("OMGHAI!");
+
+            Text = "OMGHAI!";
 
             IList<Item> Items = new List<Item>{
                 new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
@@ -39,18 +46,26 @@ namespace GildedRoseRefactoringKata
 
             var app = new GildedRose(Items);
 
+            
 
             for (var i = 0; i < 31; i++)
             {
                 Console.WriteLine("-------- day " + i + " --------");
+                Text += "-------- day " + i + " --------";
+
                 Console.WriteLine("name, sellIn, quality");
+                Text += "name, sellIn, quality";
+
                 for (var j = 0; j < Items.Count; j++)
                 {
                     Console.WriteLine(Items[j].Name + ", " + Items[j].SellIn + ", " + Items[j].Quality);
+                    Text += Items[j].Name + ", " + Items[j].SellIn + ", " + Items[j].Quality;
                 }
                 Console.WriteLine("");
-                app.UpdateQuality();
+                app.UpdateItems();
             }
+
+            
         }
     }
 }

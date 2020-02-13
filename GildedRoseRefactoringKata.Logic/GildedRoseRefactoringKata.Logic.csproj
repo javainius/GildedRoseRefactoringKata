@@ -45,6 +45,7 @@
     <Compile Include="Calculations\SellInChanger.cs" />
     <Compile Include="ItemLogics\AgedBrieLogic.cs" />
     <Compile Include="ItemLogics\BackStagePassLogic.cs" />
+    <Compile Include="ItemLogics\ItemLogic.cs" />
     <Compile Include="ItemLogics\NormalItemLogic.cs" />
     <Compile Include="ItemLogics\SulfurasLogic.cs" />
     <Compile Include="Models\Item.cs" />

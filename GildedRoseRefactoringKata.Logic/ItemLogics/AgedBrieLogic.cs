@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace GildedRoseRefactoringKata.Logic.ItemLogics
 {
-    public class AgedBrieLogic
+    public class AgedBrieLogic : ItemLogic
     {
-        public Item AgedBrie { get; set; }
+        
         public AgedBrieLogic(Item agedBrie)
         {
-            AgedBrie = agedBrie;
+            Item = agedBrie;
         }
 
         public Item GetUpdatedItem()
         {
-            return AgedBrie;
+            
         }
     }
 }

@@ -1,7 +1,7 @@
-﻿using NUnit.Framework;
-using System;
+﻿using GildedRoseRefactoringKata.Logic.ItemLogics;
+using GildedRoseRefactoringKata.Logic.UpdateLogic;
+using NUnit.Framework;
 using System.Collections.Generic;
-using System.Text;
 
 namespace GildedRoseRefactoringKata.Tests
 {
@@ -21,7 +21,7 @@ namespace GildedRoseRefactoringKata.Tests
             // Act
 
 
-            for (int i = 0; i < days; i++) app.UpdateQuality();
+            for (int i = 0; i < days; i++) app.UpdateItems();
 
 
 
@@ -44,7 +44,7 @@ namespace GildedRoseRefactoringKata.Tests
             // Act
 
 
-            for (int i = 0; i < days; i++) app.UpdateQuality();
+            for (int i = 0; i < days; i++) app.UpdateItems();
 
 
 
@@ -67,7 +67,7 @@ namespace GildedRoseRefactoringKata.Tests
             // Act
 
 
-            for (int i = 0; i < days; i++) app.UpdateQuality();
+            for (int i = 0; i < days; i++) app.UpdateItems();
 
 
 
