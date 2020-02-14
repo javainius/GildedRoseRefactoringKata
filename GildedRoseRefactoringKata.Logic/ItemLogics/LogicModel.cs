@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace GildedRoseRefactoringKata.Logic.ItemLogics
 {
-    public class LogicModel
+    public abstract class LogicModel
     {
-        public Item _item { get; set; }
-        public QualityCalculator _quality { get; set; }
-        public SellInCalculator _sellIn { get; set; }
+        protected Item _item { get; set; }
+        protected QualityCalculator _quality { get; set; }
+        protected SellInCalculator _sellIn { get; set; }
     }
 }

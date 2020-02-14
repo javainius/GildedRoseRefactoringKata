@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace GildedRoseRefactoringKata.Tests
+namespace GildedRoseRefactoringKata.Tests.MainTest
 {
     class MainTest
     {
@@ -14,14 +14,14 @@ namespace GildedRoseRefactoringKata.Tests
         public void MainMethod_OriginalValues_ValuesMatchingTextFromFile()
         {
             //Arrange
-            string directory = @"C:\Users\Vainius\source\repos\RefactoringTask\GildedRose-Refactoring-Kata\";
-            string[] rightText = File.ReadAllLines(Path.Combine(directory, "TestText.txt"));
+            TextReader tr = new StreamReader(@"TestText.txt");
+            string rightText = tr.ReadLine();
 
             // Act
             Program.Main(new string[] {"smth"});
 
             // Assert
-            Assert.AreEqual(rightText[0], Program.Text);
+            Assert.AreEqual(rightText, Program.Text);
         }
     }
 }

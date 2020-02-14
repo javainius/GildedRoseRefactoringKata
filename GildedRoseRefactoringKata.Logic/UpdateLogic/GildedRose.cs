@@ -16,25 +16,28 @@ namespace GildedRoseRefactoringKata.Logic.UpdateLogic
         {
             for (var i = 0; i < Items.Count; i++)
             {
-                if (Items[i].Name == "Aged Brie")
+                switch (Items[i].Name)
                 {
-                    var agedBrie = new AgedBrieLogic(Items[i]);
-                    Items[i] = agedBrie.GetUpdatedItem();
-                }
-                else if (Items[i].Name == "Sulfuras, Hand of Ragnaros")
-                {
+                    case "Aged Brie":
+                        var agedBrie = new AgedBrieLogic(Items[i]);
+                        Items[i] = agedBrie.GetUpdatedItem();
+                        break;
+
+                    case "Sulfuras, Hand of Ragnaros":
+                        break;
                     // Legendary method for legendary item
+
+                    case "Backstage passes to a TAFKAL80ETC concert":
+                        var backStagePass = new BackStagePassLogic(Items[i]);
+                        Items[i] = backStagePass.GetUpdatedItem();
+                        break;
+
+                    default:
+                        var norlmalItem = new NormalItemLogic(Items[i]);
+                        Items[i] = norlmalItem.GetUpdatedItem();
+                        break;
                 }
-                else if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
-                {
-                    var backStagePass = new BackStagePassLogic(Items[i]);
-                    Items[i] = backStagePass.GetUpdatedItem();
-                }
-                else
-                {
-                    var norlmalItem = new NormalItemLogic(Items[i]);
-                    Items[i] = norlmalItem.GetUpdatedItem();
-                }
+
             }
         }
         public void UpdateItemsUsingLinq()
