@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GildedRoseRefactoringKata",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GildedRoseRefactoringKata.Tests", "tests\GildedRoseRefactoringKata.Tests\GildedRoseRefactoringKata.Tests.csproj", "{CC393717-0497-48A5-9442-66DAD49CBFE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GildedRoseRefactoringKata.Logic", "GildedRoseRefactoringKata.Logic\GildedRoseRefactoringKata.Logic.csproj", "{16393B2C-342F-4BAD-8F08-F29DB0B845CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GildedRoseRefactoringKata.Logic", "src\GildedRoseRefactoringKata.Logic\GildedRoseRefactoringKata.Logic.csproj", "{16393B2C-342F-4BAD-8F08-F29DB0B845CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

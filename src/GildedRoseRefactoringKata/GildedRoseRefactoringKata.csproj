@@ -53,7 +53,7 @@
     <None Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\GildedRoseRefactoringKata.Logic\GildedRoseRefactoringKata.Logic.csproj">
+    <ProjectReference Include="..\GildedRoseRefactoringKata.Logic\GildedRoseRefactoringKata.Logic.csproj">
       <Project>{16393b2c-342f-4bad-8f08-f29db0b845cd}</Project>
       <Name>GildedRoseRefactoringKata.Logic</Name>
     </ProjectReference>

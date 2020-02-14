@@ -14,8 +14,9 @@ namespace GildedRoseRefactoringKata.Tests.MainTest
         public void MainMethod_OriginalValues_ValuesMatchingTextFromFile()
         {
             //Arrange
-            TextReader tr = new StreamReader(@"TestText.txt");
-            string rightText = tr.ReadLine();
+            string fileName = "TestText.txt";
+            string path = Path.Combine(Environment.CurrentDirectory, @"MainTest\", fileName);
+            string rightText = File.ReadAllText(path);
 
             // Act
             Program.Main(new string[] {"smth"});
