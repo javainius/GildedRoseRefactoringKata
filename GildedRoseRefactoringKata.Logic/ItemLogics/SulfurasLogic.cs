@@ -1,15 +1,8 @@
 ﻿using GildedRoseRefactoringKata.Logic.Calculations;
-using GildedRoseRefactoringKata.Logic.Interfaces;
-using GildedRoseRefactoringKata.Logic.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GildedRoseRefactoringKata.Logic.ItemLogics
 {
-    public class SulfurasLogic : LogicModel, IItemLogic
+    public class SulfurasLogic : LogicModel
     {
         public SulfurasLogic(Item item)
         {
