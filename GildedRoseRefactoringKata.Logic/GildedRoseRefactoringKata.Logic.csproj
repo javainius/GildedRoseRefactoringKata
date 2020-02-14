@@ -48,6 +48,7 @@
     <Compile Include="ItemLogics\NormalItemLogic.cs" />
     <Compile Include="ItemLogics\SulfurasLogic.cs" />
     <Compile Include="Models\Item.cs" />
+    <Compile Include="ItemLogics\LogicModel.cs" />
     <Compile Include="UpdateLogic\GildedRose.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

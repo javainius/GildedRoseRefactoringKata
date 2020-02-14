@@ -1,4 +1,6 @@
 ﻿using GildedRoseRefactoringKata.Logic.Calculations;
+using GildedRoseRefactoringKata.Logic.Interfaces;
+using GildedRoseRefactoringKata.Logic.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +9,8 @@ using System.Threading.Tasks;
 
 namespace GildedRoseRefactoringKata.Logic.ItemLogics
 {
-    public class BackStagePassLogic
+    public class BackStagePassLogic : LogicModel, IItemLogic
     {
-        private Item _item { get; set; }
-        private QualityCalculator _quality { get; set; }
-        private SellInCalculator _sellIn { get; set; }
-
         public BackStagePassLogic(Item item)
         {
             _item = item;
